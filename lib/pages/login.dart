@@ -1,4 +1,9 @@
+import 'dart:js';
+
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+import 'pages/homePage.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -31,6 +36,30 @@ class LoginPage extends StatelessWidget {
                 Navigator.pushNamed(context, '/account');
               },
               child: Text('Login'),
+
+@override
+dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
+}
+
+SignInWithGoogle() async {
+  GoogleSignInAccount? googleUser= await GoogleSignIn().signIn();
+
+  GoogleSignInAuthentication? googleAuth=await googleUser?.authentication;
+
+  AuthCredential credential= GoogleAuthProvider.credential(
+    accessToken: googleAuth?.accessToken,
+    idToken: googleAuth?.idToken,
+  );
+
+  UserCredential userCredential=await FirebaseAuth.instance.signInWithCredential(credential);
+
+  print(userCredential.user?.displayName); 
+
+  if (userCredential.user != null) {
+    // Navigator.of(context as BuildContext).push(MaterialPageRoute(
+    //   builder: (BuildContext context) =>HomePage(title: 'homepage')
+    // ));
+  }
             ),
           ],
         ),
