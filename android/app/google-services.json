@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "548600571761",
+    "project_id": "flutterhabit",
+    "storage_bucket": "flutterhabit.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:548600571761:android:310401943512051590f8d0",
+        "android_client_info": {
+          "package_name": "com.example.habit_speed_code"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "548600571761-eeosdoi638klf4lb48hokb0i7b637um6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOaHjtxUZjqhnAsKfgYg7Eawr4D83jsIo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "548600571761-eeosdoi638klf4lb48hokb0i7b637um6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
